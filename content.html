@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Powerful Generator — Hero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --hero-img: url('https://i.redd.it/went-for-the-airy-summer-old-school-film-vibe-how-did-i-do-v0-sau7266p9i4d1.jpg?width=3024&format=pjpg&auto=webp&s=a8a3274bd1f0bf7a485a298a8ed45fa197868651');
+      --accent: 66,135,255;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
+    body{background:#0b0b10;color:#fff}
+
+    /* Header */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:center; /* Center nav */
+      padding:12px 20px;
+      background:#0b0b10;
+      position:sticky;
+      top:0;
+      z-index:10;
+      flex-wrap:wrap;
+    }
+    .brand{font-weight:700; position:absolute; left:20px;}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:26px}
+    nav a{text-decoration:none;color:rgba(255,255,255,.86);font-weight:600}
+    
+    /* Hamburger for small screens */
+    .menu-toggle{
+      display:none;
+      flex-direction:column;
+      cursor:pointer;
+      position:absolute;
+      right:20px;
+    }
+    .menu-toggle span{
+      height:3px;
+      width:25px;
+      background:#fff;
+      margin:4px 0;
+      border-radius:2px;
+    }
+
+    @media (max-width:880px){
+      nav ul{gap:16px;font-size:14px}
+    }
+    @media (max-width:520px){
+      .menu-toggle{display:flex}
+      nav ul{
+        flex-direction:column;
+        display:none;
+        width:100%;
+        background:#0b0b10;
+        position:absolute;
+        top:60px;
+        left:0;
+        padding:12px 0;
+      }
+      nav ul.show{display:flex;}
+      nav ul li{padding:8px 20px}
+    }
+
+    /* HERO */
+    .hero{
+      width:100%;
+      max-width:1400px;
+      min-height:850px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+      background-image:var(--hero-img);
+      background-size:cover;
+      background-position:center;
+      position:relative;
+      overflow:hidden;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(15,16,48,.72) 0%, rgba(8,9,30,.86) 100%),
+        radial-gradient(800px 280px at 50% 20%, rgba(86,104,255,.18), transparent 40%),
+        var(--hero-img);
+      background-size:cover;
+      background-position:center;
+      opacity:0.5;
+      mix-blend-mode:multiply;
+      pointer-events:none;
+      z-index:0;
+    }
+
+    /* Hero text (no border) */
+    .hero-content{
+      position:relative;
+      z-index:1;
+      max-width:900px;
+    }
+
+    .eyebrow{display:block;font-size:12px;letter-spacing:1.6px;color:rgba(255,255,255,0.9);margin-bottom:8px;font-weight:700}
+    h1{font-size:40px;line-height:1.1;margin:6px 0 16px;font-weight:800}
+    p.lead{font-size:15px;opacity:.86;line-height:1.6;margin-bottom:20px}
+
+    .size-badge{display:inline-block;padding:6px 10px;border-radius:6px;background:rgba(255,255,255,0.06);font-size:12px;color:rgba(255,255,255,0.85)}
+
+    /* Responsive text */
+    @media (max-width:880px){
+      h1{font-size:32px}
+    }
+    @media (max-width:520px){
+      h1{font-size:26px}
+      .lead{font-size:14px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Startup 3</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav aria-label="Main">
+      <ul id="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="be.html">Be</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <div class="hero-content" role="region" aria-label="Hero content">
+      <span class="eyebrow">FREE SAMPLE</span>
+      <h1>Powerful Generator and Free<br>Figma Sources</h1>
+      <p class="lead">Startup Framework contains components and complex blocks which can easily be integrated into almost any design. All of the components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions.</p>
+      <div>
+        <span class="size-badge">1400 × 540</span>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toggleMenu(){
+      const nav = document.getElementById('nav-list');
+      nav.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

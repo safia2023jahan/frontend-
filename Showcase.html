@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Last Work</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #2F1893;
+      color: #fff;
+      padding: 50px 20px;
+    }
+
+    /* Section container */
+    .last-work {
+      width: 970px;
+      height: 816px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 40px;
+    }
+
+    /* Title */
+    .last-work h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      width: 970px;
+      height: 52px;
+    }
+
+    /* Grid layout for images */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 30px;
+    }
+
+    .work-item {
+      width: 470px;
+      height: 371px;
+      background: #1e0f73;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .work-item img {
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .caption {
+      height: 61px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 26px;
+      padding: 10px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    .caption .title {
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .caption .subtitle {
+      font-weight: 400;
+      font-size: 14px;
+      opacity: 0.85;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .last-work {
+        width: 100%;
+        height: auto;
+      }
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+      .work-item {
+        width: 100%;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="last-work">
+    <h2>LAST WORK</h2>
+
+    <div class="work-grid">
+      <!-- Item 1 -->
+      <div class="work-item">
+        <img src="images/ali.png" alt="Ali Project">
+        <div class="caption">
+          <div class="title">UI KIT</div>
+          <div class="subtitle">MOZART PROJECT</div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="work-item">
+        <img src="images/aziza.png" alt="Aziza Project">
+        <div class="caption">
+          <div class="title">FRAMEWORK</div>
+          <div class="subtitle">STARTUP 2.0</div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="work-item">
+        <img src="images/sam.png" alt="Sam Project">
+        <div class="caption">
+          <div class="title">PHOTOS</div>
+          <div class="subtitle">FROM THE SKY</div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="work-item">
+        <img src="images/photo.png" alt="Photo Project">
+        <div class="caption">
+          <div class="title">PICTURES</div>
+          <div class="subtitle">AIR FORCES</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Happy Clients</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: #2F1893;
+      color: #fff;
+      padding: 60px 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 50px;
+      margin-left: 215px;
+      width: 364px;
+      height: 52px;
+    }
+
+    .clients {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 60px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .client-box {
+      width: 470px;
+      height: 237px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .client-box img {
+      width: 70px;
+      height: 70px;
+      border-radius: 4px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .client-text {
+      max-width: 307px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 28px;
+      margin-bottom: 10px; /* default spacing */
+      color: #FFFFFF;
+    }
+
+    .client-name {
+      font-weight: 700;
+      font-size: 16px;
+      color: #FFFFFF;
+      opacity: 0.3;
+    }
+
+    /* Extra space only for Gene + Allan */
+    .gene .client-text,
+    .allan .client-text {
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        margin-left: 0;
+        text-align: center;
+      }
+
+      .clients {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        justify-items: center;
+      }
+
+      .client-box {
+        width: 100%;
+        max-width: 470px;
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>OUR HAPPY CLIENTS</h1>
+
+  <div class="clients">
+    <!-- Client 1 -->
+    <div class="client-box">
+      <img src="images/Userpic.png" alt="User 1">
+      <div>
+        <p class="client-text">
+          Get a fully retina ready site when you build with Startup Framework.
+          Websites look sharper and more gorgeous on devices with retina display support.
+        </p>
+        <div class="client-name">RAYHAN CURRAN</div>
+      </div>
+    </div>
+
+    <!-- Client 2 -->
+    <div class="client-box">
+      <img src="images/Userpic2.png" alt="User 2">
+      <div>
+        <p class="client-text">
+          As a business targeting high net worth individuals, we were looking for a slick,
+          cool and minimalistic design for our website.
+        </p>
+        <div class="client-name">KALAY FRAME</div>
+      </div>
+    </div>
+
+    <!-- Client 3 (Gene) -->
+    <div class="client-box gene">
+      <img src="images/Userpic3.png" alt="User 3">
+      <div>
+        <p class="client-text">
+          The most important part of the Startup Framework is the samples.
+        </p>
+        <div class="client-name">GENE WHITFIELD</div>
+      </div>
+    </div>
+
+    <!-- Client 4 (Allan) -->
+    <div class="client-box allan">
+      <img src="images/Userpic4.png" alt="User 4">
+      <div>
+        <p class="client-text">
+          I've built my website with Startup just in one day, and it was ready-to-go.
+        </p>
+        <div class="client-name">ALLAN KIM</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

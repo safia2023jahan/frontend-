@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Section</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: 
+        linear-gradient(rgba(47, 24, 147, 0.4), rgba(47, 24, 147, 0.4)),
+        url("images/ground.png") no-repeat center center/cover;
+      color: #fff;
+      padding: 50px 20px;
+    }
+
+    .contact-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      align-items: flex-start;
+    }
+
+    /* Left side text */
+    .contact-text {
+      max-width: 400px;
+    }
+
+    .contact-text h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .contact-text p {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 32px;
+      margin-bottom: 40px;
+    }
+
+    .contact-info {
+      font-size: 16px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 80px; /* Increased gap so text lines up with form end */
+    }
+
+    .contact-info img {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Right side form */
+    .contact-form {
+      background: #fff;
+      width: 470px;
+      padding: 30px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: rgba(0, 0, 0, 0.7);
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      font-size: 14px;
+      font-family: 'DM Sans', sans-serif;
+      color: rgba(0, 0, 0, 0.7);
+      background: #f9f9f9;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 100px;
+      border-radius: 20px;
+    }
+
+    .budget-input {
+      max-width: 150px;
+    }
+
+    /* Bottom row: send and checkbox */
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .form-actions label {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.7);
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .form-actions img.icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 0; /* no extra space, stays at start */
+    }
+
+    .send-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #25DAC5;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 12px 24px;
+      border-radius: 30px;
+      cursor: pointer;
+      gap: 10px;
+    }
+
+    .send-btn svg {
+      width: 20px;
+      height: 20px;
+      color: #1E90FF; /* blue send icon */
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .contact-section {
+        flex-direction: column;
+        align-items: center;
+      }
+      .contact-form {
+        width: 100%;
+        height: auto;
+      }
+      .contact-info {
+        gap: 20px; /* reduce gap on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="contact-section">
+    <!-- Left side -->
+    <div class="contact-text">
+      <h2>LET’S KEEP IN TOUCH</h2>
+      <p>
+        We have created a new product that will help designers, developers and companies 
+        create websites for their startups quickly and easily.
+      </p>
+
+      <div class="contact-info">
+        <img src="images/fa-phone.png" alt="Phone">
+        <span>+1 555 505 5050</span>
+      </div>
+
+
+      <div class="contact-info">
+        <img src="images/fa-envelope.png" alt="Email">
+        <span>info@designmodo.com</span>
+      </div>
+
+      
+      <div class="contact-info">
+        <img src="images/fa-building-o.png" alt="Address">
+        <span>San Francisco, CA 560 Bush St & 20th Ave, Apt 5 San Francisco, 230909</span>
+      </div>
+    </div>
+
+    <!-- Right side form -->
+    <form class="contact-form">
+      <!-- Name + Budget -->
+      <div class="form-row">
+        <div style="flex: 1;">
+          <label for="name">YOUR NAME</label>
+          <input type="text" id="name" placeholder="Enter your name">
+        </div>
+        <div>
+          <label for="budget">BUDGET</label>
+          <input type="text" id="budget" class="budget-input" placeholder="500$" readonly>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div style="margin-bottom:20px;">
+        <label for="email">EMAIL</label>
+        <input type="email" id="email" placeholder="name@gmail.com">
+      </div>
+
+      <!-- Message -->
+      <div style="margin-bottom:20px;">
+        <label for="message">YOUR MESSAGE</label>
+        <textarea id="message" placeholder="Write your message"></textarea>
+      </div>
+
+      <!-- Actions row -->
+      <div class="form-actions">
+        <!-- Left side -->
+        <label>
+          <img src="images/on.png" alt="Check" class="icon">
+          Send me a copy
+        </label>
+
+        <!-- Right side (Send button only) -->
+        <button type="submit" class="send-btn">
+          <span>Send</span>
+          <!-- Blue send icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" 
+               viewBox="0 0 24 24" fill="currentColor">
+            <path d="M2 21l21-9L2 3v7l15 2-15 2v7z"/>
+          </svg>
+        </button>
+      </div>
+    </form>
+  </section>
+
+</body>
+</html>

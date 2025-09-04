@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features Section</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #fff;
+      background: #000; /* fallback */
+    }
+
+    /* Features Section */
+    .features-section {
+      width: 1400px;
+      height: 736px;
+      margin: 0 auto;
+      background: 
+        linear-gradient(rgba(47, 24, 147, 0.55), rgba(47, 24, 147, 0.55)),
+        url("https://www.shutterstock.com/image-photo/early-morning-sunlight-over-sand-260nw-1432655585.jpg") 
+        no-repeat center center/cover;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative; /* important for absolute children */
+    }
+
+    /* Left Image */
+    .features-image {
+      position: absolute;
+      top: 126.41px;
+      left: -150px;   /* adjusted so image shows fully */
+    }
+
+    .features-image img {
+      width: 733.6px;
+      height: 449.88px;
+      border-radius: 4.04px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Right Text Container */
+    .features-container {
+      position: absolute;
+      top: 158px;
+      left: 515px;
+      width: 600px;
+      height: 168px;
+      text-align: left;
+    }
+
+    .features-container h2 {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 52px;
+      letter-spacing: -4px;
+      margin-bottom: 20px;
+    }
+
+    .features-container p {
+      font-size: 1.1rem;
+      color: #ddd;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+
+    /* Feature Items Row */
+    .feature-items {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .feature-item {
+      flex: 1;
+      max-width: 45%;
+    }
+
+    .feature-item h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .feature-item p {
+      font-size: 0.95rem;
+      color: #ccc;
+      line-height: 1.5;
+    }
+
+    /* NEW Right-side Box */
+    .right-box {
+      position: absolute;
+      right: 30px;  /* stick to rightmost */
+      top: 50%;
+      transform: translateY(-50%); /* vertical center */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .right-box span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.6);
+      display: block;
+    }
+
+    .right-box span.active {
+      background: #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .features-section {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+      }
+
+      .features-image {
+        position: static;
+        margin: 0 auto 20px auto;
+      }
+
+      .features-image img {
+        width: 100%;
+        height: auto;
+      }
+
+      .features-container {
+        position: static;
+        width: 100%;
+        height: auto;
+        text-align: center;
+      }
+
+      .feature-items {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .feature-item {
+        max-width: 100%;
+      }
+
+      .right-box {
+        display: none; /* hide on small screens */
+      }
+    }
+  </style>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    
+    <!-- Left Image -->
+    <div class="features-image">
+      <img src="images/Mockup.png" alt="Mockup">
+    </div>
+
+    <!-- Right Text -->
+    <div class="features-container">
+      <h2>We Create Something New</h2>
+      <p>
+        We have created a new product <br>
+        that will help designers, developers <br>
+        and companies create websites easily.
+      </p>
+
+      <div class="feature-items">
+        <div class="feature-item">
+          <h3>30 New Feature Pages</h3>
+          <p>Startup Framework contains components and complex blocks which can easily.</p>
+        </div>
+
+        <div class="feature-item">
+          <h3>Useful Symbol Components</h3>
+          <p>Samples will show you the feeling on how to play around using the components.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side Dots -->
+    <div class="right-box">
+      <span></span>
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </section>
+
+</body>
+</html>

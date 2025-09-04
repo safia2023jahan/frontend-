@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plans & Pricing</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background: linear-gradient(
+                  rgba(47, 24, 147, 0.45), 
+                  rgba(47, 24, 147, 0.45)
+                ),
+                url("images/allah.png") no-repeat center center;
+      background-size: cover;
+    }
+
+    /* Title box */
+    .title-box {
+      text-align: center;
+      margin: 80px 20px 40px;
+      max-width: 600px;
+    }
+
+    .title-box h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+
+    .title-box p {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    /* Pricing section */
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .pricing-box {
+      flex: 1 1 300px;
+      max-width: 370px;
+      border: 2px solid #FFFFFF;
+      background: rgba(255, 255, 255, 0.05);
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 12px;
+    }
+
+    .price {
+      font-size: 36px;
+      margin: 20px 0;
+    }
+
+    .features {
+      list-style: none;
+      padding: 0;
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .features li {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+    }
+
+    .tick {
+      color: #00ff6a;
+      font-weight: bold;
+      width: 20px;
+      margin-right: 8px;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      border: 2px solid #fff;
+      background: transparent;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 25px;
+      font-size: 16px;
+      transition: 0.3s;
+      text-decoration: none;
+      width: 100%;
+      max-width: 200px;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #2F1893;
+    }
+
+    /* Highlight professional */
+    .professional .btn {
+      background: #FF3366;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .title-box h1 {
+        font-size: 28px;
+      }
+      .price {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Title -->
+  <div class="title-box">
+    <h1>Plans & Pricing</h1>
+    <p>Startup Framework is free forever — you only pay for custom domain hosting or to export your site.</p>
+  </div>
+
+  <!-- Pricing Section -->
+  <div class="pricing-container">
+    <!-- Starter -->
+    <div class="pricing-box starter">
+      <h2>Starter</h2>
+      <p class="price">$9.99</p>
+      <ul class="features">
+        <li><span class="tick">✔</span> 2 GB of space</li>
+        <li><span class="tick">✔</span> 14 days of backups</li>
+        <li><span class="tick">✔</span> Social integrations</li>
+        <li><span class="tick">✔</span> Client billing</li>
+        <li><span class="tick"></span> Remote access</li>
+        <li><span class="tick"></span> Custom domain</li>
+        <li><span class="tick"></span> 24 hours support</li>
+        <li><span class="tick"></span> Admin tools</li>
+        <li><span class="tick"></span> Collaboration tools</li>
+        <li><span class="tick"></span> User management</li>
+      </ul>
+      <a href="starter.html" class="btn">Get Started</a>
+    </div>
+
+    <!-- Professional -->
+    <div class="pricing-box professional">
+      <h2>Professional</h2>
+      <p class="price">$19.99</p>
+      <ul class="features">
+        <li><span class="tick">✔</span> 2 GB of space</li>
+        <li><span class="tick">✔</span> 14 days of backups</li>
+        <li><span class="tick">✔</span> Social integrations</li>
+        <li><span class="tick">✔</span> Client billing</li>
+        <li><span class="tick">✔</span> Remote access</li>
+        <li><span class="tick">✔</span> Custom domain</li>
+        <li><span class="tick">✔</span> 24 hours support</li>
+        <li><span class="tick"></span> Admin tools</li>
+        <li><span class="tick"></span> Collaboration tools</li>
+        <li><span class="tick"></span> User management</li>
+      </ul>
+      <a href="professional.html" class="btn">Get Started</a>
+    </div>
+
+    <!-- Team -->
+    <div class="pricing-box team">
+      <h2>Team</h2>
+      <p class="price">$49.99</p>
+      <ul class="features">
+        <li><span class="tick">✔</span> 2 GB of space</li>
+        <li><span class="tick">✔</span> 14 days of backups</li>
+        <li><span class="tick">✔</span> Social integrations</li>
+        <li><span class="tick">✔</span> Client billing</li>
+        <li><span class="tick">✔</span> Remote access</li>
+        <li><span class="tick">✔</span> Custom domain</li>
+        <li><span class="tick">✔</span> 24 hours support</li>
+        <li><span class="tick">✔</span> Admin tools</li>
+        <li><span class="tick">✔</span> Collaboration tools</li>
+        <li><span class="tick">✔</span> User management</li>
+      </ul>
+      <a href="team.html" class="btn">Get Started</a>
+    </div>
+  </div>
+</body>
+</html>

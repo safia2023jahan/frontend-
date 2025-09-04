@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup Crew</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #2F1893;
+      color: #fff;
+      padding: 50px 20px;
+    }
+
+    .startup-crew {
+      max-width: 970px;
+      margin: 0 auto;
+    }
+
+    /* Title */
+    .startup-crew h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    /* Description text */
+    .startup-crew p.description {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      margin-bottom: 40px;
+      max-width: 754px;
+      white-space: pre-line; /* respects line breaks */
+    }
+
+    /* Grid of team members */
+    .crew-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      background: #2F1893; /* same as overall background */
+      padding: 20px;
+      border-radius: 10px;
+      width: 764px;
+      margin-left: 0; /* aligned with paragraph */
+    }
+
+    .member {
+      background: #2F1893; /* same as boundary */
+      border-radius: 10px;
+      width: 154px;
+      height: 241.5px;
+      text-align: center;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .member img.photo {
+      width: 70px;
+      height: 70px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .member .name {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .member .role {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 26px;
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .social a img {
+      width: 17px;
+      height: 17px;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .crew-grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+      }
+      .member {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .crew-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="startup-crew">
+    <h2>STARTUP CREW</h2>
+    <p class="description">
+      The most important part of the Startup Framework  
+      is the samples. The samples form a set of 25 usable  
+      pages you can use as is or you can add new blocks  
+      from UI Kit.
+    </p>
+
+    <div class="crew-grid">
+      <!-- Row 1 (3 members) -->
+      <div class="member">
+        <img src="images/mush.png" alt="Leah Saloman" class="photo">
+        <div class="name">Leah Saloman</div>
+        <div class="role">UI Designer</div>
+        <div class="social">
+          <a href="https://twitter.com" target="_blank"><img src="images/fa-twitter.png" alt="Twitter"></a>
+          <a href="https://facebook.com" target="_blank"><img src="images/fa-facebook-square.png" alt="Facebook"></a>
+          <a href="https://dribbble.com" target="_blank"><img src="images/fa-dribbble.png" alt="Dribbble"></a>
+          <a href="https://instagram.com" target="_blank"><img src="images/fa-instagram.png" alt="Instagram"></a>
+        </div>
+      </div>
+
+      <div class="member">
+        <img src="images/uzma.png" alt="Colon Timmons" class="photo">
+        <div class="name">Colon Timmons</div>
+        <div class="role">UX Designer</div>
+        <div class="social">
+          <a href="https://twitter.com" target="_blank"><img src="images/fa-twitter.png" alt="Twitter"></a>
+          <a href="https://dribbble.com" target="_blank"><img src="images/fa-dribbble.png" alt="Dribbble"></a>
+        </div>
+      </div>
+
+      <div class="member">
+        <img src="images/faya.png" alt="Miguel Osborne" class="photo">
+        <div class="name">Miguel Osborne</div>
+        <div class="role">Front-end Developer</div>
+        <div class="social">
+          <a href="https://skype.com" target="_blank"><img src="images/fa-skype.png" alt="Skype"></a>
+          <a href="https://medium.com" target="_blank"><img src="images/fa-medium.png" alt="Medium"></a>
+          <a href="https://github.com" target="_blank"><img src="images/fa-git.png" alt="GitHub"></a>
+        </div>
+      </div>
+
+      <!-- Row 2 (2 members) -->
+      <div class="member">
+        <img src="images/humzo.png" alt="Taylor Simon" class="photo">
+        <div class="name">Taylor Simon</div>
+        <div class="role">Product Manager</div>
+        <div class="social">
+          <a href="https://twitter.com" target="_blank"><img src="images/fa-twitter.png" alt="Twitter"></a>
+          <a href="https://instagram.com" target="_blank"><img src="images/fa-instagram.png" alt="Instagram"></a>
+        </div>
+      </div>
+
+      <div class="member">
+        <img src="images/abas.png" alt="Steven MacAlister" class="photo">
+        <div class="name">Steven MacAlister</div>
+        <div class="role">Copywriter</div>
+        <div class="social">
+          <a href="https://twitter.com" target="_blank"><img src="images/fa-twitter.png" alt="Twitter"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
